@@ -1,0 +1,144 @@
+<?xml version="1.0"?>
+<!--
+    Copyright (C) 2010  Fernando Espinosa
+
+This program is free software; you can redistribute it and/or modify 
+it under the terms of the GNU General Public License as published by 
+the Free Software Foundation; either version 2 of the License, or 
+(at your option) any later version. 
+
+This program is distributed in the hope that it will be useful, 
+but WITHOUT ANY WARRANTY; without even the implied warranty of 
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the 
+GNU General Public License for more details. 
+
+You should have received a copy of the GNU General Public License 
+along with this program; if not, write to the Free Software 
+Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA. 
+-->
+
+<!--
+Anderson-Greenwood-AG-14 
+Algunos de los datos de los perfiles alares son imaginados, por no encontrar informacion 
+suficiente, las cuerdas y angulos si son los correctos
+-->
+
+<!-- 
+ Peso en vacio 861lb
+ -->
+
+<airplane mass="861">
+
+<!-- Configuracion de aproximacion -->
+<approach speed="35" aoa="15" fuel="0.5">
+  <control-setting axis="/controls/engines/engine[0]/throttle" value="0.5"/>
+  <control-setting axis="/controls/engines/engine[0]/mixture" value="1.0"/>
+  <control-setting axis="/controls/flight/flaps" value="1.0"/>
+</approach>
+
+<!-- Configuracion de crucero -->
+<cruise speed="96" alt="19000" fuel="0.5">
+  <control-setting axis="/controls/engines/engine[0]/throttle" value="0.75"/>
+  <control-setting axis="/controls/engines/engine[0]/mixture" value="0.75"/>
+  <control-setting axis="/controls/flight/elevator-trim" value="0.1"/>
+  <control-setting axis="/controls/flight/flaps" value="0.0"/>
+</cruise>
+
+<!-- Punto de vista del piloto -->
+<cockpit x="-1.41" y="0.15" z="0.45"/>
+
+<fuselage ax="2.79" ay="0" az="-0.40" bx="-4.70" by="0" bz="1.25"
+          width="1.20" taper="0.60" midpoint="0.33"/>
+
+<!-- Configuraciones -->
+
+<!-- Alas -->
+<wing x="-0.11" y="0.70" z="0.21" taper="1.0" incidence="2" twist="-3"
+      length="5.50" chord="1.60" sweep="0" dihedral="7" camber="0.1">
+  <stall aoa="18" width="4" peak="1.5"/>
+  <flap0 start=".31" end="0.85" lift="1.5" drag="1.4"/>
+  <flap1 start="0" end=".5" lift="1.5" drag="1.5"/>
+  <control-input axis="/controls/flight/aileron" control="FLAP0" split="true"/>
+  <control-input axis="/controls/flight/aileron-trim" control="FLAP0" split="true"/>
+  <control-output control="FLAP0" side="left"
+		  prop="/surface-positions/left-aileron-pos-norm"/>
+  <control-output control="FLAP0" side="right"
+		  prop="/surface-positions/right-aileron-pos-norm"/>
+	<control-input axis="/controls/flight/flaps" control="FLAP1"/>
+	<control-speed control="FLAP1" transition-time="5"/>
+  <control-output control="FLAP1" prop="/surface-positions/flap-pos-norm"/>
+</wing>
+
+<!-- Estabilizador horizontal -->
+
+<hstab x="-4.71" y="0.05" z="1.0" taper="0.8" effectiveness="2.0"
+       length="1.37" chord="1.50" sweep="0">
+  <stall aoa="16" width="4" peak="1.5"/>
+  <flap0 start="0" end="1" lift="2.0" drag="1.2"/>
+  <control-input axis="/controls/flight/elevator" control="FLAP0"/>
+  <control-input axis="/controls/flight/elevator-trim" control="FLAP0"/>
+  <control-output control="FLAP0" prop="/surface-positions/elevator-pos-norm"/>
+</hstab>
+
+<!-- Estabilizadores verticales -->
+<!-- El timon esta situado solo en el estabilizador izquierdo -->
+ 
+<vstab x="-4.87" y="1.40" z="-0.65" taper="0.38" effectiveness="1.50"
+       length="1.12" chord="1.28" sweep="0" incidence="1.5">
+  <stall aoa="16" width="4" peak="1.1"/>
+  <flap0 start="0" end="1" lift="2.0" drag="1.2"/>
+  <control-input axis="/controls/flight/rudder" control="FLAP0" invert="true"/>
+  <control-input axis="/controls/flight/rudder-trim" control="FLAP0" invert="true"/>
+  <control-output control="FLAP0" prop="/surface-positions/rudder-pos-norm"
+		  min="1" max="-1"/>
+</vstab>
+
+<!-- Aceleracion al 75% a 19000ft -->
+<propeller radius="1.0"
+	   cruise-speed="90" cruise-rpm="2150"
+           cruise-alt="19000" cruise-power="49"
+           takeoff-power="55" takeoff-rpm="3200"
+           x="-0.90" y="0" z="-0.03" mass="150" moment="4"
+      >
+  <actionpt x="-1.15" y="0" z="-0.03"/>
+  <piston-engine 
+  	eng-power="99" eng-rpm="3500"
+  	>
+  <control-input axis="/controls/engines/engine[0]/throttle" control="THROTTLE"/>
+  <control-input axis="/controls/engines/engine[0]/starter" control="STARTER"/>
+  <control-input axis="/controls/engines/engine[0]/magnetos" control="MAGNETOS"/>
+  <control-input axis="/controls/engines/engine[0]/mixture" control="MIXTURE"/>
+  </piston-engine>
+</propeller>
+
+<!-- Tren de aterrizaje -->
+
+<gear x="-2.70" y="0" z="-1.19" compression="0.10"> <!-- Central -->
+  <control-input axis="/controls/flight/rudder" control="STEER"
+                 src0="-1.0" src1="1.0"
+                 dst0="0.50" dst1="-0.50"/>
+</gear>
+
+<gear x="0.30" y="1.20" z="-1.30" compression="0.10"> <!-- principal Izqa -->
+  <control-input axis="/controls/gear/brake-left" control="BRAKE" split="true"/>
+  <control-input axis="/controls/gear/brake-parking" control="BRAKE" split="true"/>
+</gear>
+
+<gear x="0.30" y="-1.20" z="-1.30" compression="0.10"> <!-- principal dcha -->
+  <control-input axis="/controls/gear/brake-right" control="BRAKE" split="true"/>
+  <control-input axis="/controls/gear/brake-parking" control="BRAKE" split="true"/>
+</gear>
+
+<!-- Capacidad del tanque de combustible 23-galones **Unos 98 litros** capacity en libras-->
+<tank x="0.17" y="0" z="0.26" capacity="138"/> 
+
+<!--
+  Ajuste del lastre *Posicion y peso en libras* **mass en negativo para restar peso y 
+  mass en positivo para amentarlo**
+-->
+<ballast x="-4.0" y="2.50" z="0.42" mass="-15"/>
+
+<!-- piloto -->
+<weight x="1.00" y="0.0" z="-0.45" mass-prop="/yasim/AG-14/pilot-lb"/>
+
+</airplane>

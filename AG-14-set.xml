@@ -1,0 +1,211 @@
+<?xml version="1.0"?>
+<!--
+    Copyright (C) 2010  Fernando Espinosa
+
+This program is free software; you can redistribute it and/or modify 
+it under the terms of the GNU General Public License as published by 
+the Free Software Foundation; either version 2 of the License, or 
+(at your option) any later version. 
+
+This program is distributed in the hope that it will be useful, 
+but WITHOUT ANY WARRANTY; without even the implied warranty of 
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the 
+GNU General Public License for more details. 
+
+You should have received a copy of the GNU General Public License 
+along with this program; if not, write to the Free Software 
+Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA. 
+-->
+
+
+<!--
+Modelo de avion ligero Anderson Greenwood AG-14 construido con 
+AC3D 6.5.28 para el simulador FlightGear v1.9.1 
+-->
+
+<PropertyList>
+ <sim>
+
+  <description>Anderson Greenwood AG-14</description>
+  <author>Fernando Espinosa</author>
+  
+  <flight-model>yasim</flight-model>
+  <aero>AG-14</aero>
+  <fuel-fraction>0.5</fuel-fraction>
+
+  <startup>
+   <splash-texture>Aircraft/AG-14/AG-14-splash.png</splash-texture>
+  </startup>
+  
+
+  <systems>
+   <electrical>
+    <path>Aircraft/AG-14/electrical.xml</path>
+   </electrical>
+  </systems>
+
+  <sound>
+   <path>Aircraft/AG-14/Sounds/AG-14-sounds.xml</path>
+  </sound>
+
+  <panel>
+   <visibility archive="n">false</visibility>
+  </panel>
+
+  <model>
+   <path archive="y">Aircraft/AG-14/Models/AG-14.xml</path>
+  </model>
+
+  <view>
+   <internal archive="y">true</internal>
+   <config>
+     <x-offset-m archive="y">-0.19</x-offset-m>
+     <y-offset-m archive="y">0.25</y-offset-m>
+     <z-offset-m archive="y">-1.20</z-offset-m>
+     <pitch-offset-deg>-8</pitch-offset-deg>
+   </config>
+  </view>
+
+  <view n="100">
+        <name>Copilot view</name>
+        <enabled type="bool">true</enabled>
+        <type>lookfrom</type>
+        <internal type="bool">true</internal>
+        <config>
+            <from-model type="bool">true</from-model>
+            <from-model-idx type="int">0</from-model-idx>
+            <ground-level-nearplane-m type="double">0.5f</ground-level-nearplane-m>
+            <default-field-of-view-deg type="double">55.0</default-field-of-view-deg>
+            <x-offset-m type="double">0.20</x-offset-m>
+            <y-offset-m type="double">0.25</y-offset-m>
+            <z-offset-m type="double">-1.20</z-offset-m>
+            <pitch-offset-deg>-8</pitch-offset-deg>
+        </config>
+  </view>
+
+ <yokes-visible type="bool">1</yokes-visible>
+
+  <help>
+    <title>AG-14</title>
+    <line>Cruise speed: 110 mph (95.5 kt)</line>
+    <line>Maximum speed: 120 mph (104.2 kt)</line>
+    <line>Best glide speed: 60 mph (52 kt)</line>
+    <line>Maneuver speed: 70 mph (61 kt)</line>
+    <line>Approach speed: 50-60 mph (44-52 kt)</line>
+    <line>Stall speed: 38 mph (33 kt)</line>
+    <line>Maximum altitude: 19000 ft</line>
+    <key>
+      <name>d</name>
+      <desc>Open/close door</desc>
+    </key>
+  </help>
+  
+  <flaps>
+      <setting>0.0</setting> <!-- 0 -->
+      <setting>0.142</setting> <!-- 5 -->
+      <setting>0.428</setting> <!-- 15 -->
+      <setting>1.0</setting> <!-- 35 -->
+  </flaps>
+
+ <model>
+ <path>Aircraft/AG-14/Models/AG-14.xml</path>
+  <livery>
+      <file type="string"/>
+  </livery>
+ </model> 
+  
+<menubar>
+ <default>
+  <menu n="10">
+   <label>AG-14</label>
+   <enabled type="bool">true</enabled>
+   <item>
+    <label>Select livery</label>
+    <binding>
+     <command>nasal</command>
+       <script>aircraft.livery.dialog.toggle()</script>
+    </binding>
+   </item>
+  <item>
+   <label>Show/hide yokes</label>
+   <binding>
+   <command>property-toggle</command>
+   <property>sim/yokes-visible</property>
+   </binding>
+  </item>
+  </menu>
+ </default>
+</menubar>
+
+ </sim>
+
+ <yasim>
+  <AG-14>
+   <pilot-lb>180</pilot-lb>
+  </AG-14>
+ </yasim>
+
+ <controls>
+  <flight>
+   <aileron-trim>0.0025</aileron-trim>   
+   <elevator-trim>0.00</elevator-trim> 
+   <rudder-trim>0.075</rudder-trim>
+  </flight>
+  <gear>
+      <brake-parking>1</brake-parking>
+  </gear>
+  <engines>
+   <engine n="0">
+    <magnetos>3</magnetos>
+   </engine>
+  </engines>
+  <door>0.0</door>
+ </controls>
+
+ <engines>
+   <engine>
+     <rpm type="double">500</rpm>
+   </engine>
+ </engines>
+ 
+ <lighting>
+			<strobe type="bool">true</strobe>
+			<beacon type="bool">true</beacon>
+			<nav-lights type="bool">true</nav-lights>
+</lighting>
+
+ <nasal>
+ 	
+    <AG-14>
+      <file>Aircraft/AG-14/Nasal/light.nas</file>
+      <file>Aircraft/AG-14/Nasal/liveries.nas</file>
+      <file>Aircraft/Instruments-3d/Clock/M877/M877.nas</file>
+    </AG-14>
+       
+  <electrical>
+   <file>Aircraft/AG-14/Nasal/AG14-electrical.nas</file>
+  </electrical>
+  
+ </nasal>
+  
+  
+ <input>
+  <keyboard>
+   <key n="100">
+     <name>d</name>
+     <desc>Open/Close door</desc>
+     <binding>
+       <command>nasal</command>
+       <script>
+         if(getprop("controls/door[0]") > 0) {
+           interpolate("controls/door[0]", 0, 1);
+         } else {
+           interpolate("controls/door[0]", 1, 1);
+         }
+       </script>
+     </binding>
+     </key>
+  </keyboard>
+ </input>
+ 		
+</PropertyList>

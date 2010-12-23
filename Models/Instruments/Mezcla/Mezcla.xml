@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+    <path>Mezcla.ac</path>
+
+
+       <!-- Controles -->
+           
+ <animation>
+  <name>MixtureGroup</name>
+  <object-name>Mixture</object-name>
+  <object-name>MixtureRod</object-name>
+ </animation>
+ 
+ 
+ <animation>
+  <type>translate</type>
+  <object-name>MixtureGroup</object-name>
+  <property>controls/engines/engine[0]/mixture</property>
+  <factor>-0.10</factor>
+  <axis>
+   <x>1.0</x>
+   <y>0.0</y>
+   <z>0.0</z>
+  </axis>
+ </animation>
+
+
+</PropertyList>
+
