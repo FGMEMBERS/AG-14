@@ -142,7 +142,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA.
  </model>
 
  <model>
-  <path>Aircraft/AG-14/Models/Instruments/Reloj digital/Reloj digital.xml</path>
+  <path>Aircraft/AG-14/Models/Instruments/Reloj_digital/Reloj_digital.xml</path>
   <offsets>
    <x-m>-1.767</x-m>
    <y-m>-0.352396</y-m>

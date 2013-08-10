@@ -1,8 +1,6 @@
-
-
 <PropertyList>
 	
- <path>Reloj digital.ac</path>
+ <path>Reloj_digital.ac</path>
 
  <animation>
    <type>textranslate</type>

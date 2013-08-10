@@ -8,7 +8,7 @@ kids 5
 OBJECT poly
 name "Face"
 loc 0.0015781 0.000247695 1.49919e-005
-texture "OIL Temp-Press.png"
+texture "OIL_Temp-Press.png"
 crease 45.000000
 numvert 17
 -1.16415e-009 1.12341e-008 -0.0165478
