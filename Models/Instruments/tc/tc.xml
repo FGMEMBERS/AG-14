@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+ <path>tc.ac</path>
+
+ <animation>
+  <type>material</type>
+  <object-name>Ball</object-name>
+  <object-name>Face</object-name>
+  <object-name>Airplane</object-name>
+     <emission>
+         <red>0.035</red>
+         <green>0.012</green>
+         <blue>0.007</blue>
+         <factor-prop>systems/electrical/outputs/instrument-lights</factor-prop>
+     </emission>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>Airplane</object-name>
+  <property>/instrumentation/turn-indicator/indicated-turn-rate</property>
+  <factor>20.0</factor>
+  <axis>
+   <x>-1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>Ball</object-name>
+  <property>/instrumentation/slip-skid-ball/indicated-slip-skid</property>
+  <factor>5.729</factor>
+
+  <min-deg>-5</min-deg>
+  <max-deg>5</max-deg>
+  <center>
+   <x-m>0</x-m>
+   <y-m>0</y-m>
+   <z-m>0.15</z-m> 
+  </center>
+  <axis>
+   <x>-1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+</PropertyList>
+
+

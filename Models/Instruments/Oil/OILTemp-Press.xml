@@ -1,0 +1,86 @@
+<?xml version="1.0"?>
+<PropertyList>
+
+
+ <path>OILTemp-Press.ac</path>
+
+<animation>
+     <type>material</type>
+     <object-name>Face</object-name>       
+     <object-name>Aguja1</object-name> 
+     <object-name>Aguja2</object-name>  
+     <emission>
+         <red>0.035</red>
+         <green>0.012</green>
+         <blue>0.007</blue>
+         <factor-prop>systems/electrical/outputs/instrument-lights</factor-prop>
+     </emission>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>Aguja1</object-name>
+  <property>/engines/engine[0]/oil-temperature-degf</property>
+  <interpolation>
+   <entry>
+    <ind>104</ind>
+    <dep>0</dep>
+   </entry>
+   <entry>
+    <ind>392</ind>
+    <dep>124</dep>
+   </entry>
+  </interpolation>
+  <center>
+   <x-m>0</x-m>
+   <y-m>0</y-m>
+   <z-m>0.015</z-m>
+  </center>
+  <axis>
+   <x>1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>Aguja2</object-name>
+  <property>/engines/engine/rpm</property>
+  <interpolation>
+   <entry>
+    <ind>0</ind>
+    <dep>1</dep>
+   </entry>
+   <entry>
+    <ind>875</ind>
+    <dep>17</dep>
+   </entry>
+   <entry>
+    <ind>1750</ind>
+    <dep>34</dep>
+   </entry>
+   <entry>
+    <ind>2625</ind>
+    <dep>51</dep>
+   </entry>
+   <entry>
+    <ind>3500</ind>
+    <dep>60</dep>
+   </entry>
+  </interpolation>
+  <center>
+   <x-m>0</x-m>
+   <y-m>0</y-m>
+   <z-m>-0.015</z-m>
+  </center>
+  <axis>
+   <x>-1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+</PropertyList>
+
+

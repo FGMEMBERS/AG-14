@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<PropertyList>
+
+    <path>fuelqty.ac</path>
+
+    <animation>
+        <type>material</type>
+        <object-name>Fuelface</object-name>
+        <object-name>FQneedle</object-name>
+        <emission>
+            <red>0.035</red>
+            <green>0.012</green>
+            <blue>0.007</blue>
+            <factor-prop>systems/electrical/outputs/instrument-lights</factor-prop>
+        </emission>
+    </animation>
+
+    <animation>
+        <type>rotate</type>
+        <object-name>FQneedle</object-name>
+        <property>/consumables/fuel/tank[0]/level-gal_us</property>
+        <interpolation>
+            <entry><ind>0.0</ind><dep>0.0</dep></entry>
+            <entry><ind>24.0</ind><dep>240.0</dep></entry>
+        </interpolation>
+        <axis>
+            <x>-1.0</x>
+            <y>0</y>
+            <z>0</z>
+        </axis>
+        <center>
+            <x-m>0</x-m>
+            <y-m>0</y-m>
+            <z-m>0</z-m>
+        </center>
+    </animation>
+
+
+    <animation>
+        <type>select</type>
+        <object-name>FQneedle</object-name>
+        <condition>
+            <not>
+                <property>controls/fuel/gauge-switch</property>
+            </not>
+        </condition>
+    </animation>
+
+</PropertyList>

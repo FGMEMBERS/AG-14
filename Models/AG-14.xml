@@ -1,0 +1,1011 @@
+<?xml version="1.0"?>
+<!--
+    Copyright (C) 2010  Fernando Espinosa
+
+This program is free software; you can redistribute it and/or modify 
+it under the terms of the GNU General Public License as published by 
+the Free Software Foundation; either version 2 of the License, or 
+(at your option) any later version. 
+
+This program is distributed in the hope that it will be useful, 
+but WITHOUT ANY WARRANTY; without even the implied warranty of 
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the 
+GNU General Public License for more details. 
+
+You should have received a copy of the GNU General Public License 
+along with this program; if not, write to the Free Software 
+Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA. 
+-->
+
+
+<PropertyList>
+
+<path>AG-14.ac</path>
+ 
+<nasal>
+ <load>
+  var livery_update = aircraft.livery_update.new("Aircraft/AG-14/Models/Liveries",);
+ </load>
+
+ <unload>
+  livery_update.stop();
+ </unload>
+</nasal>
+
+<animation>
+ <type>material</type>
+  <object-name>Fuselaje</object-name>
+  <object-name>Puerta</object-name>
+  <object-name>Ala</object-name>
+  <object-name>puntas de ala</object-name>
+  <object-name>cylinder1</object-name>
+  <object-name>cylinder2</object-name>
+  <object-name>cylinder3</object-name>
+  <object-name>cylinder4</object-name>
+  <object-name>Estabilizador Dcho</object-name>
+  <object-name>Estabilizador Dcho1</object-name>
+  <object-name>Estabilizador Izq</object-name>
+  <object-name>Timon izquierdo</object-name>
+  <object-name>cylinder5</object-name>
+  <object-name>Timon de profundidad</object-name>
+  <object-name>Base del ala</object-name>
+  <object-name>Flap Dcho</object-name>
+  <object-name>Flap Izq</object-name>
+  <object-name>Aleron derecho</object-name>
+  <object-name>Aleron izquierdo</object-name>
+  <property-base>sim/model/livery</property-base>
+  <texture-prop>texture</texture-prop>
+  <texture>Liveries/blue-grey.png</texture>
+</animation>
+
+ <!-- panel de control cabina -->
+
+ <model>
+  <path>Aircraft/AG-14/Models/Instruments/Altimetro/Altimetro.xml</path>
+  <offsets>
+   <x-m>-1.77</x-m>
+   <y-m>0.07</y-m>
+   <z-m>0.11</z-m>
+  </offsets>
+ </model>
+
+ <model>
+  <path>Aircraft/AG-14/Models/Instruments/compass/compass.xml</path>
+  <offsets>
+   <x-m>-1.767</x-m>
+   <y-m>-0.07</y-m>
+   <z-m>0.11</z-m>
+  </offsets>
+ </model>
+
+ <model>
+  <path>Aircraft/AG-14/Models/Instruments/asi/asi.xml</path>
+  <offsets>
+   <x-m>-1.77</x-m>
+   <y-m>0.0</y-m>
+   <z-m>0.11</z-m>
+  </offsets>
+ </model>
+ 
+ <model>
+  <path>Aircraft/AG-14/Models/Instruments/tc/tc.xml</path>
+  <offsets>
+   <x-m>-1.77</x-m>
+   <y-m>-0.14</y-m>
+   <z-m>0.11</z-m>
+  </offsets>
+ </model>
+
+ <model>
+  <path>Aircraft/AG-14/Models/Instruments/vsi/vsi.xml</path>
+  <offsets>
+   <x-m>-1.77</x-m>
+   <y-m>0.14</y-m>
+   <z-m>0.11</z-m>
+  </offsets>
+ </model>
+ 
+ <model>
+  <path>Aircraft/AG-14/Models/Instruments/Revoluciones/tach.xml</path>
+  <offsets>
+   <x-m>-1.77</x-m>
+   <y-m>0.0</y-m>
+   <z-m>0.03</z-m>
+  </offsets>
+ </model>
+
+  <model>
+  <path>Aircraft/AG-14/Models/Instruments/Oil/OILTemp-Press.xml</path>
+  <offsets>
+   <x-m>-1.767</x-m>
+   <y-m>-0.063</y-m>
+   <z-m>0.045</z-m>
+  </offsets>
+</model>
+ 
+ <model>
+  <path>Aircraft/AG-14/Models/Instruments/flap-ind/flap-indicator.xml</path>
+  <offsets>
+   <x-m>-1.767</x-m>
+   <y-m>0.063</y-m>
+   <z-m>0.045</z-m>
+  </offsets>
+ </model>
+ 
+ <model>
+  <path>Aircraft/AG-14/Models/Instruments/Fuel/fuelqty.xml</path>
+  <offsets>
+   <x-m>-1.767</x-m>
+   <y-m>0.047</y-m>
+   <z-m>-0.015</z-m>
+  </offsets>
+ </model>
+
+ <model>
+  <path>Aircraft/AG-14/Models/Instruments/Reloj_digital/Reloj_digital.xml</path>
+  <offsets>
+   <x-m>-1.767</x-m>
+   <y-m>-0.352396</y-m>
+   <z-m>-0.0829059</z-m>
+  </offsets>
+ </model>
+ 
+ <model>
+  <path>Aircraft/AG-14/Models/Instruments/BatteryGauge/BatteryGauge.xml</path>
+  <offsets>
+   <x-m>-1.767</x-m>
+   <y-m>-0.047</y-m>
+   <z-m>-0.015</z-m>
+  </offsets>
+ </model>
+ 
+ <model>
+  <path>Aircraft/AG-14/Models/Instruments/AI/ai.xml</path>
+  <offsets>
+   <x-m>-1.77</x-m>
+   <y-m>-0.26</y-m>
+   <z-m>0.08</z-m>
+  </offsets>
+ </model>
+ 
+ <model>
+  <path>Aircraft/AG-14/Models/Instruments/AI/ai.xml</path>
+  <offsets>
+   <x-m>-1.77</x-m>
+   <y-m>0.26</y-m>
+   <z-m>0.08</z-m>
+  </offsets>
+ </model>
+ 
+ 
+ <!-- controles -->
+ 
+ <model>
+  <path>Aircraft/AG-14/Models/Instruments/Acelerador/Acelerador.xml</path>
+  <offsets>
+   <x-m>-1.767</x-m>
+   <y-m>0.0</y-m>
+   <z-m>-0.07</z-m>
+  </offsets>
+ </model>
+ 
+ <model>
+  <path>Aircraft/AG-14/Models/Instruments/magneto-switch/mags.xml</path>
+  <offsets>
+   <x-m>-1.77</x-m>
+   <y-m>-0.41</y-m>
+   <z-m>-0.04</z-m>
+  </offsets>
+ </model>
+ 
+ <model>
+  <path>Aircraft/AG-14/Models/Instruments/Yoke/yoke-pa24.xml</path>
+  <offsets>
+   <x-m>-1.67</x-m>
+   <y-m>-0.19</y-m>
+   <z-m>0.06</z-m>
+  </offsets>
+ </model>
+ 
+ <model>
+  <path>Aircraft/AG-14/Models/Instruments/Yoke/yoke-pa24.xml</path>
+  <offsets>
+   <x-m>-1.67</x-m>
+   <y-m>0.19</y-m>
+   <z-m>0.06</z-m>
+  </offsets>
+ </model>
+ 
+ <model>
+  <path>Aircraft/AG-14/Models/Instruments/Mezcla/Mezcla.xml</path>
+  <offsets>
+   <x-m>-1.767</x-m>
+   <y-m>0.05</y-m>
+   <z-m>-0.07</z-m>
+  </offsets>
+ </model>
+ 
+ <model>
+  <path>Aircraft/AG-14/Models/Instruments/Mezcla/Mezcla.xml</path>
+  <offsets>
+   <x-m>-1.767</x-m>
+   <y-m>-0.05</y-m>
+   <z-m>-0.07</z-m>
+  </offsets>
+ </model>
+ 
+ <model>
+  <path>Aircraft/AG-14/Models/Instruments/Pedales/pedals.xml</path>
+  <offsets>
+   <x-m>-2.02</x-m>
+   <y-m>-0.12</y-m>
+   <z-m>-0.59</z-m>
+  </offsets>
+ </model>
+ 
+
+
+    <!-- Animaciones del fuselaje -->
+
+ <animation>
+  <type>noshadow</type>
+  <object-name>propblur</object-name>
+  <object-name>propdisc</object-name>
+ </animation>
+
+ <animation>
+  <type>select</type>
+  <object-name>Propeller</object-name>
+  <condition>
+   <less-than>
+    <property>engines/engine/rpm</property>
+    <value>299</value>
+   </less-than>
+  </condition>
+ </animation>
+ 
+   <animation>
+        <type>select</type>
+        <object-name>propblur</object-name>
+        <condition>
+            <greater-than>
+                <property>engines/engine/rpm</property>
+                <value>300</value>
+            </greater-than>
+            <less-than>
+                <property>engines/engine/rpm</property>
+                <value>3000</value>
+            </less-than>
+        </condition>
+  </animation>
+
+  <animation>
+        <type>spin</type>
+        <object-name>propblur</object-name>
+        <property>engines/engine/rpm</property>
+        <center>
+          <x-m>1.16186</x-m>
+          <y-m>0.0042989</y-m>
+          <z-m>-0.0269645</z-m>
+        </center>
+        <axis>
+            <x>1</x>
+            <y>0</y>
+            <z>0</z>
+        </axis>
+  </animation>
+
+ <animation>
+        <type>select</type>
+        <object-name>propdisc</object-name>
+        <condition>
+            <greater-than>
+                <property>engines/engine/rpm</property>
+                <value>3001</value>
+            </greater-than>
+        </condition>
+ </animation>
+
+<animation>
+        <type>spin</type>
+        <object-name>propdisc</object-name>
+        <property>engines/engine/rpm</property>
+        <factor>0.005</factor>
+        <center>
+         <x-m>1.16186</x-m>
+         <y-m>0.0042989</y-m>
+         <z-m>-0.0269645</z-m>
+        </center>
+        <axis>
+            <x>1</x>
+            <y>0</y>
+            <z>0</z>
+        </axis>
+ </animation>
+
+ <animation>
+  <type>spin</type>
+  <object-name>Propeller</object-name>
+  <property>engines/engine[0]/rpm</property>
+  <factor>-1</factor>
+  <center>
+   <x-m>1.15114</x-m>
+   <y-m>0</y-m>
+   <z-m>-0.0125287</z-m>
+  </center>
+  <axis>
+   <x>1.0</x>
+   <y>0.0</y>
+   <z>0.0</z>
+  </axis>
+ </animation>
+ 
+ <animation>
+  <type>rotate</type>
+  <object-name>Aleron izquierdo</object-name>
+  <property>surface-positions/left-aileron-pos-norm</property>
+  <factor>25</factor>
+  <axis>
+   <x1-m>0.53</x1-m>
+   <y1-m>-5.65</y1-m>
+   <z1-m>0.64</z1-m>
+   <x2-m>0.53</x2-m>
+   <y2-m>-4.55</y2-m>
+   <z2-m>0.52</z2-m>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>Aleron derecho</object-name>
+  <property>surface-positions/right-aileron-pos-norm</property>
+  <factor>25</factor>
+  <axis>
+   <x1-m>0.57</x1-m>
+   <y1-m>4.55</y1-m>
+   <z1-m>0.52</z1-m>
+   <x2-m>0.57</x2-m>
+   <y2-m>5.65</y2-m>
+   <z2-m>0.64</z2-m>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>Timon de profundidad</object-name>
+  <property>surface-positions/elevator-pos-norm</property>
+  <interpolation>
+   <entry>
+    <ind>-1</ind>
+    <dep>-29</dep>
+   </entry>
+   <entry>
+    <ind>1</ind>
+    <dep>34</dep>
+   </entry>
+  </interpolation>
+  <center>
+   <x-m>4.72</x-m>
+   <y-m>0.0</y-m>
+   <z-m>1.20</z-m>
+  </center>
+  <axis>
+   <x>0.0</x>
+   <y>1.0</y>
+   <z>0.0</z>
+  </axis>
+ </animation>
+
+  <animation>
+  <type>rotate</type>
+  <object-name>Timon izquierdo</object-name>
+  <property>surface-positions/rudder-pos-norm</property>
+  <factor>30.0</factor>
+  <center>
+   <x-m>4.50</x-m>
+   <y-m>-1.40</y-m>
+   <z-m>1.00</z-m>
+  </center>
+  <axis>
+   <x>0.0</x>
+   <y>0.0</y>
+   <z>1.0</z>
+  </axis>
+ </animation>
+ 
+ <animation>
+    <type>rotate</type>
+    <object-name>Flap Izq</object-name>
+    <property>surface-positions/flap-pos-norm</property>
+    <factor>35</factor>
+    <axis>
+        <x1-m>0.50</x1-m>
+        <y1-m>-4.39</y1-m>
+        <z1-m>0.51</z1-m>
+        <x2-m>0.50</x2-m>
+        <y2-m>-1.72</y2-m>
+        <z2-m>0.22</z2-m>
+    </axis>
+
+   </animation>
+
+ <animation>
+    <type>rotate</type>
+    <object-name>Flap Dcho</object-name>
+    <property>surface-positions/flap-pos-norm</property>
+    <factor>35</factor>
+    <axis>
+        <x1-m>0.50</x1-m>
+        <y1-m>1.72</y1-m>
+        <z1-m>0.22</z1-m>
+        <x2-m>0.50</x2-m>
+        <y2-m>4.39</y2-m>
+        <z2-m>0.51</z2-m>
+    </axis>
+ </animation>
+ 
+ <animation>
+  <type>rotate</type>
+  <object-name>Puerta</object-name>
+  <object-name>Cristal puerta</object-name>
+  <property>controls/door[0]</property>
+  <factor>-150.0</factor>
+  <center>
+   <x-m>-1.52</x-m>
+   <y-m>0.68</y-m>
+   <z-m>-0.03</z-m>
+  </center>
+  <axis>
+   <x>0.00</x>
+   <y>-0.00</y>
+   <z>-0.06</z>
+  </axis>
+</animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>Rueda delantera</object-name>
+  <object-name>Rueda delantera_2</object-name>
+  <object-name>Eje Rueda delantera</object-name>
+  <property>surface-positions/rudder-pos-norm</property>
+  <factor>30</factor>
+   <axis>
+			<x1-m>-2.53</x1-m>
+			<y1-m>0</y1-m>
+			<z1-m>-0.63</z1-m>
+			<x2-m>-2.66</x2-m>
+			<y2-m>0.0</y2-m>
+			<z2-m>-1.15</z2-m>
+			
+		</axis>
+ </animation>
+  
+ <animation>
+    <type>translate</type>
+  <object-name>Rueda delantera</object-name>
+  <object-name>Rueda delantera_2</object-name>
+    <property>gear/gear[0]/compression-norm</property>
+    <object-name>Eje Rueda delantera</object-name>
+    <factor>-0.20</factor>
+    <axis>
+      <x>0.1</x>
+      <y>0</y>
+      <z>0.9</z>
+    </axis>
+  </animation>
+  
+ <animation>
+  <type>rotate</type>
+  <object-name>Eje trasero Dcho</object-name>
+  <object-name>Rueda Dcha</object-name>
+   <property>gear/gear[2]/compression-norm</property>
+  <factor>1.9</factor>
+   <center>
+   <x-m>-0.07</x-m>
+   <y-m>0.52</y-m>
+   <z-m>-0.38</z-m>
+  </center>
+  <axis>
+   <x>1.0</x>
+   <y>0.0</y>
+   <z>0.0</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>Eje trasero Izq</object-name>
+  <object-name>Rueda Izq</object-name>
+   <property>gear/gear[1]/compression-norm</property>
+  <factor>-1.9</factor>
+   <center>
+   <x-m>-0.07</x-m>
+   <y-m>-0.52</y-m>
+   <z-m>-0.38</z-m>
+  </center>
+  <axis>
+   <x>1.0</x>
+   <y>0.0</y>
+   <z>0.0</z>
+  </axis>
+ </animation>
+  
+     <!-- Luces *Lights*-->
+    
+ <animation>
+  <name>ElectronicsGroup</name>
+  <object-name>TaxiLightSwitch</object-name>
+  <object-name>LandingLightSwitch</object-name>
+  <object-name>PitotHeatSwitch</object-name>
+  <object-name>NavLightSwitch</object-name>
+  <object-name>BeaconSwitch</object-name>
+  <object-name>StrobeSwitch</object-name>
+ </animation>
+ 
+     <!-- Luces interruptores *Lights switches*-->
+     
+ <animation>
+  <type>material</type>
+  <object-name>baseLandingLightSwitch</object-name>
+  <object-name>baseBeaconSwitch</object-name>
+  <object-name>baseNavLightSwitch</object-name>
+  <object-name>baseStrobeSwitch</object-name>
+  <object-name>basePitotHeatSwitch</object-name>
+  <object-name>Cartel LandingLight</object-name>
+  <object-name>Cartel Beacon</object-name>
+  <object-name>Cartel Nav.Light</object-name>
+  <object-name>Cartel Strobes</object-name>
+  <object-name>Cartel Pitot Heat</object-name>
+     <emission>
+         <red>0.035</red>
+         <green>0.012</green>
+         <blue>0.007</blue>
+         <factor-prop>systems/electrical/outputs/instrument-lights</factor-prop>
+     </emission>
+ </animation>
+ 
+ <!-- Seleccion de la animacion para los interruptores *pick animation for switches* -->
+ 
+  <!-- pick -->  
+ <animation>
+      <type>pick</type>
+      <object-name>LandingLightSwitch</object-name>
+      <visible>true</visible>
+      <action>
+        <button>0</button>
+        <repeatable>false</repeatable>
+        <binding>
+          <command>property-toggle</command>
+          <property>controls/lighting/landing-lights</property>
+        </binding>
+      </action>
+</animation>
+
+<animation>
+      <type>pick</type>
+      <object-name>StrobeSwitch</object-name>
+      <visible>true</visible>
+      <action>
+        <button>0</button>
+        <repeatable>false</repeatable>
+        <binding>
+          <command>property-toggle</command>
+          <property>controls/lighting/strobe</property>
+        </binding>
+      </action>
+</animation>
+
+ <animation>
+      <type>pick</type>
+      <object-name>BeaconSwitch</object-name>
+      <visible>true</visible>
+      <action>
+        <button>0</button>
+        <repeatable>false</repeatable>
+        <binding>
+          <command>property-toggle</command>
+          <property>controls/lighting/beacon</property>
+        </binding>
+      </action>
+</animation>
+
+<animation>
+      <type>pick</type>
+      <object-name>NavLightSwitch</object-name>
+      <visible>true</visible>
+      <action>
+        <button>0</button>
+        <repeatable>false</repeatable>
+        <binding>
+          <command>property-toggle</command>
+          <property>controls/lighting/nav-lights</property>
+        </binding>
+      </action>
+</animation>
+
+<animation>
+      <type>pick</type>
+      <object-name>PitotHeatSwitch</object-name>
+      <visible>true</visible>
+      <action>
+        <button>0</button>
+        <repeatable>false</repeatable>
+        <binding>
+          <command>property-toggle</command>
+         <property>controls/anti-ice/pitot-heat</property>
+        </binding>
+      </action>
+</animation>
+
+  <!-- rotate --> 
+  
+ <animation>
+  <type>rotate</type>
+  <object-name>LandingLightSwitch</object-name>
+  <property>controls/lighting/landing-lights</property>
+  <factor>-55</factor>
+  <axis>
+   <x>0.0</x>
+   <y>1.0</y>
+   <z>0.0</z>
+  </axis>
+  <center>
+   <x-m>-1.77365</x-m>
+   <y-m>-0.361201</y-m>
+   <z-m>0.0031288</z-m>
+  </center>
+ </animation>
+ 
+ <animation>
+  <type>rotate</type>
+  <object-name>StrobeSwitch</object-name>
+  <property>controls/lighting/strobe</property>
+  <factor>-55</factor>
+  <axis>
+   <x>0.0</x>
+   <y>1.0</y>
+   <z>0.0</z>
+  </axis>
+  <center>
+   <x-m>-1.77365</x-m>
+   <y-m>-0.322163</y-m>
+   <z-m>-0.0299988</z-m>
+  </center>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>BeaconSwitch</object-name>
+  <property>controls/lighting/beacon</property>
+  <factor>-55</factor>
+  <axis>
+   <x>0.0</x>
+   <y>1.0</y>
+   <z>0.0</z>
+  </axis>
+  <center>
+   <x-m>-1.77365</x-m>
+   <y-m>-0.322163</y-m>
+   <z-m>0.0031288</z-m>
+  </center>
+ </animation>
+ 
+ <animation>
+  <type>rotate</type>
+  <object-name>NavLightSwitch</object-name>
+  <property>controls/lighting/nav-lights</property>
+  <factor>-55</factor>
+  <axis>
+   <x>0.0</x>
+   <y>1.0</y>
+   <z>0.0</z>
+  </axis>
+  <center>
+   <x-m>-1.77365</x-m>
+   <y-m>-0.361201</y-m>
+   <z-m>-0.0299988</z-m>
+  </center>
+ </animation>
+ 
+ <animation>
+  <type>rotate</type>
+  <object-name>PitotHeatSwitch</object-name>
+  <property>controls/anti-ice/pitot-heat</property>
+  <factor>-55</factor>
+  <axis>
+   <x>0.0</x>
+   <y>1.0</y>
+   <z>0.0</z>
+  </axis>
+  <center>
+   <x-m>-1.77365</x-m>
+   <y-m>-0.144999</y-m>
+   <z-m>-0.0299988</z-m>
+  </center>
+ </animation>
+ 
+<!-- Animacion de las ruedas *Wheels animations* -->
+
+   <animation>
+        <type>spin</type>
+        <object-name>Rueda delantera_2</object-name>
+        <property>gear/gear[0]/rollspeed-ms</property>
+        <factor>12</factor>
+        <center>
+            <x-m>-2.65599</x-m>
+            <y-m>0.000310987</y-m>
+            <z-m>-1.11787</z-m>
+        </center>
+        <axis>
+            <x>0.0</x>
+            <y>-1</y>
+            <z>0</z>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>spin</type>
+        <object-name>Rueda Izq</object-name>
+        <property>gear/gear[1]/rollspeed-ms</property>
+        <factor>12</factor>
+        <center>
+            <x-m>0.22221</x-m>
+            <y-m>1.1143</y-m>
+            <z-m>-1.02467</z-m>
+        </center>
+        <axis>
+            <x>0.0</x>
+            <y>-1</y>
+            <z>0</z>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>spin</type>
+        <object-name>Rueda Dcha</object-name>
+        <property>gear/gear[2]/rollspeed-ms</property>
+        <factor>12</factor>
+        <center>
+            <x-m>0.22221</x-m>
+            <y-m>-1.11569</y-m>
+            <z-m>-1.02467</z-m>
+        </center>
+        <axis>
+            <x>0.0</x>
+            <y>-1</y>
+            <z>0</z>
+        </axis>
+    </animation>
+
+  <!-- Fuselaje *Airframe* -->
+  
+   <animation>
+  <type>select</type>
+  <object-name>BeaconOffX</object-name>
+  <condition>
+   <property>controls/lighting/beacon</property>
+  </condition>
+ </animation>
+ 
+ <!-- Luces de navegacion *Lights of navigation* -->
+ <animation>
+  <type>select</type>
+  <object-name>navlight_left</object-name>
+  <object-name>navlight_right</object-name>
+  <object-name>navlight_back</object-name>
+  <condition>
+   <property>controls/lighting/nav-lights</property>
+  </condition>
+ </animation>
+ 
+
+ 
+ <!-- luz de aterrizaje *landing light* -->
+ <animation>
+		<type>select</type>
+		<object-name>landinglight</object-name>
+		<object-name>landinglight2</object-name>
+		<condition>
+  <property>controls/lighting/landing-lights</property>
+ </condition>
+	</animation>
+	
+<animation>
+		<type>noshadow</type>
+		<object-name>landinglight</object-name>
+	</animation>
+
+	<animation>
+		<type>flash</type>
+		<object-name>landinglight</object-name>
+		<center>
+			<x-m>-2.80714</x-m>
+			<y-m>-0.00139999</y-m>
+			<z-m>-0.40508</z-m>
+		</center>
+		<axis>
+			<x>-1</x>
+			<y>0</y>
+			<z>-0.80</z>
+		</axis>
+		<power>0.5</power>
+		<factor>1</factor>
+		<offset>0</offset>
+		<two-sides type="bool">false</two-sides>
+		<min>0.01</min>
+		<max>1</max>
+	</animation>
+ 
+ 
+ <!-- estroboscopico  *strobe* -->
+ 
+ <animation>
+		<type>select</type>
+		<object-name>strobe1</object-name>
+		<object-name>strobe2</object-name>
+		<condition>
+			<property>/sim/model/AG-14/lighting/strobes/state</property>
+		</condition>
+	</animation>
+ 
+ <animation>
+		<type>range</type>
+		<min-m>0</min-m>
+		<max-m>25000</max-m>
+	</animation>
+
+	<Plane.014Xparams>
+		<light-near>0.8</light-near>
+		<light-med>3.2</light-med>
+		<light-far>160</light-far>
+	</Plane.014Xparams>
+
+	<animation>
+		<name>Plane.014XGroup</name>
+		<object-name>strobe1</object-name>
+		<object-name>strobe2</object-name>
+	</animation>
+
+	
+	<animation>
+		<type>alpha-test</type>
+		<object-name>Plane.014XGroup</object-name>
+		<alpha-factor>0.001</alpha-factor>
+	</animation>
+
+	<animation>
+		<type>translate</type>
+		<object-name>strobe1</object-name>
+		<offset-m>6.40</offset-m>
+		<axis>
+			<x>0.05</x>
+			<y>-6.25</y>
+			<z>0.84</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>translate</type>
+		<object-name>strobe2</object-name>
+		<offset-m>6.40</offset-m>
+		<axis>
+			<x>0.05</x>
+			<y>6.25</y>
+			<z>0.84</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>billboard</type>
+		<object-name>strobe1</object-name>
+		<spherical type="bool">true</spherical>
+	</animation>
+
+	<animation>
+		<type>billboard</type>
+		<object-name>strobe2</object-name>
+		<spherical type="bool">true</spherical>
+	</animation>
+
+	<animation>
+		<type>dist-scale</type>
+		<object-name>strobe1</object-name>
+		<interpolation>
+			<entry>
+				<ind>0</ind>
+				<dep alias="../../../../Plane.014Xparams/light-near"/>
+			</entry>
+			<entry>
+				<ind>500</ind>
+				<dep alias="../../../../Plane.014Xparams/light-med"/>
+			</entry>
+			<entry>
+				<ind>16000</ind>
+				<dep alias="../../../../Plane.014Xparams/light-far"/>
+			</entry>
+		</interpolation>
+	</animation>
+
+	<animation>
+		<type>dist-scale</type>
+		<object-name>strobe2</object-name>
+		<interpolation>
+			<entry>
+				<ind>0</ind>
+				<dep alias="../../../../Plane.014Xparams/light-near"/>
+			</entry>
+			<entry>
+				<ind>500</ind>
+				<dep alias="../../../../Plane.014Xparams/light-med"/>
+			</entry>
+			<entry>
+				<ind>16000</ind>
+				<dep alias="../../../../Plane.014Xparams/light-far"/>
+			</entry>
+		</interpolation>
+	</animation>
+	
+ <animation>
+		<type>select</type>
+		<object-name>BeaconOffX</object-name>
+		<condition>
+			<property>/sim/model/AG-14/lighting/beacon-top/state</property>
+		</condition>
+	</animation>	
+	
+	<animation>
+		<type>range</type>
+		<min-m>0</min-m>
+		<max-m>25000</max-m>
+	</animation>
+
+	<BeaconOffXparams>
+		<light-near>0.4</light-near>
+		<light-med>0.8</light-med>
+		<light-far>10</light-far>
+	</BeaconOffXparams>
+
+	
+	<animation>
+		<type>alpha-test</type>
+		<object-name>BeaconOffX</object-name>
+		<alpha-factor>0.001</alpha-factor>
+	</animation>
+
+	<animation>
+		<type>translate</type>
+		<object-name>BeaconOffX</object-name>
+		<offset-m>0.75</offset-m>
+		<axis>
+			<x>0.0</x>
+			<y>0</y>
+			<z>0.67</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>billboard</type>
+		<object-name>BeaconOffX</object-name>
+		<spherical type="bool">true</spherical>
+	</animation>
+
+	<animation>
+		<type>dist-scale</type>
+		<object-name>BeaconOffX</object-name>
+		<interpolation>
+			<entry>
+				<ind>0</ind>
+				<dep alias="../../../../BeaconOffXparams/light-near"/>
+			</entry>
+			<entry>
+				<ind>500</ind>
+				<dep alias="../../../../BeaconOffXparams/light-med"/>
+			</entry>
+			<entry>
+				<ind>16000</ind>
+				<dep alias="../../../../BeaconOffXparams/light-far"/>
+			</entry>
+		</interpolation>
+	</animation>
+	
+</PropertyList>
