@@ -33,6 +33,15 @@ AC3D 6.5.28 para el simulador FlightGear v1.9.1
   <aero>AG-14</aero>
   <fuel-fraction>0.5</fuel-fraction>
 
+  <tags>
+    <tag>high-wing</tag>
+    <tag>tricycle</tag>
+    <tag>fixed-gear</tag>
+    <tag>single-engine</tag>
+    <tag>piston</tag>
+    <tag>1940s</tag>
+  </tags>
+
   <startup>
    <splash-texture>Aircraft/AG-14/AG-14-splash.png</splash-texture>
   </startup>
